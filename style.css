@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary: #FF385C;
+    --bg: white;
+    --light-gray: #F7F7F7;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all;
+    transition-duration: 0.2s;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1;
+    border-bottom: 1px solid gray;
+    animation: header-height ease-in-out forwards;
+    animation-timeline: scroll();
+    animation-range: 0px 20px
+}
+
+@keyframes header-height {
+    from {
+        height: 160px;
+    }
+
+    to {
+        height: 80px;
+    }
+}
+
+
+header .header {
+    z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 1rem 3%;
+    text-align: center;
+    background-color: white;
+}
+
+nav li {
+    display: inline;
+    padding: 1rem;
+    border-radius: 50px;
+    color: #6A6A6A;
+}
+
+nav li:hover {
+    cursor: pointer;
+    background-color: var(--light-gray);
+}
+
+nav .activ {
+    font-weight: 500;
+    color: black;
+}
+
+nav .activ:hover {
+    background-color: transparent
+}
+
+header .header .left {
+    text-align: left;
+}
+
+header .header .right {
+    text-align: right;
+}
+
+header .header .right>a,
+header .header .right>i {
+    text-decoration: none;
+    color: black;
+    padding: 0.9rem 1rem;
+    border-radius: 20px
+
+}
+
+header .header .right>a:hover,
+header .header .right>i:hover {
+    cursor: pointer;
+    background-color: var(--light-gray);
+}
+
+header .header .right button {
+    all: unset;
+    padding: 0.4rem;
+    border-radius: 50px;
+    border: 0.05rem solid #b1b1b1;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+header .header .right button i {
+    vertical-align: middle;
+    color: #6b6b6b;
+    margin-inline: 0.3rem;
+}
+
+header .header .right button i:last-child {
+    font-size: 30px;
+}
+
+header .header .right button:hover {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+
+nav {
+    animation: scroll-nav ease-in-out forwards;
+    animation-timeline: scroll();
+    animation-range: 0px 20px;
+}
+
+@keyframes scroll-nav {
+    from {
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-200%) scale(0.1);
+        opacity: 0;
+    }
+}
+
+header .search-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 80px;
+    margin-inline: auto;
+    background-color: #FF385C;
+    transform-origin: top;
+    animation: scroll-search-inputs ease-in-out forwards;
+    animation-timeline: scroll();
+    animation-range: 0px 20px
+
+}
+
+@keyframes scroll-search-inputs {
+    from {
+        width: 800px;
+        transform: translateY(0);
+    }
+
+    to {
+        width: 300px;
+        transform: translateY(-80px);
+    }
+}
+
+main {
+    margin-top: 160px;
+    height: 300vh;
+    animation:  main-margin ease-in-out forwards;
+    animation-timeline: scroll();
+    animation-range: 0px 35px
+}
+
+@keyframes main-margin {
+    from {
+        margin-top: 160px;
+    }
+
+    to {
+        margin-top: 80px;
+    }
+}
