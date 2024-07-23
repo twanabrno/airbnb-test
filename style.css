@@ -174,13 +174,7 @@ header .search-inputs {
     }
 }
 
-main {
-    margin-top: 160px;
-    height: 300vh;
-    animation:  main-margin ease-in-out forwards;
-    animation-timeline: scroll();
-    animation-range: 0px 35px
-}
+
 
 @keyframes main-margin {
     from {
@@ -190,4 +184,13 @@ main {
     to {
         margin-top: 80px;
     }
+}
+main {
+    padding: 1rem;
+    text-align: center;
+    margin-top: 160px;
+    height: 300vh;
+    animation:  main-margin ease-in-out forwards;
+    animation-timeline: scroll();
+    animation-range: 0px 35px
 }
